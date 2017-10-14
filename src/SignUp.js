@@ -42,13 +42,15 @@ class SignUp extends Component {
 							<div className="col-md-12 col-sm-12 col-xs-12 text-center">
 								<form data-toggle="validator">
 									<div className="form-group row">
-										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">										
+										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">
+											<span className="input-group-addon"><i className="fa fa-user-o fa-2x"></i></span>										
 											<input type="text" onChange={e => {this.state.name}} className="form-control inputName" placeholder="Usuario o correo" required/>
 										</div>
 									</div>
 									<div className="form-group row">
-										<div className="col-lg-12 col-md-12 input-group">							
-										<input type="email" onChange={e => {this.state.email}} className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
+										<div className="col-lg-12 col-md-12 input-group">
+											<span className="input-group-addon"><i className="fa fa-key fa-fw"></i></span>							
+											<input type="password" onChange={e => {this.state.email}} className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
 										</div>
 										<div className="help-block with-errors"></div>
 									</div>
@@ -62,6 +64,11 @@ class SignUp extends Component {
 										</label>
 									</section>
 									</form>
+									<div>
+										<p>Acceso rápido</p>
+										<button><i className="fa fa-google-plus-square" aria-hidden="true"></i>GOOGLE</button>
+										<button><i className="fa fa-facebook-official" aria-hidden="true"></i>FACEBOOK</button>
+									</div>
 							</div>
 						</div>
                     </div>
