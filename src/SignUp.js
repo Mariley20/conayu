@@ -13,7 +13,7 @@ class HeaderApp extends Component{
 		</div>
 		<span className="glyphicon glyphicon-user"></span>
 		<h2 className="text-center">Ingresar</h2>
-		<hr/>
+		{/* <hr/> */}
 	  </header>);
 	}
   }
@@ -54,10 +54,11 @@ class SignUp extends Component {
 									</div>
 									<section className="container-fluid form">
 										
-										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">iNGRESAR</NavLink>
+										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
 										<label className="form-check-label">
-											 <a href=""><p>RESTABLECER CONTRASEÑA</p></a>
+											{/* modificado por gladys */}
+											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
 										</label>
 									</section>
 									</form>

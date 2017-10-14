@@ -2,10 +2,13 @@
     position: absolute;
     top: 4%;
     left: 1%;
-    
 }
 a{
     height: 50px;
+}
+/* modificado por gladys */
+.signup-h{
+    color: white;
 }
 .btnVolver a {
     color: black;
