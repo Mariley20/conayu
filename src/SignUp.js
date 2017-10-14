@@ -18,13 +18,13 @@ class HeaderApp extends Component{
 	}
   }
   
-class SignUpForm extends Component {
+class SignUp extends Component {
 	
 		constructor (props) {
 			super (props);
 			this.state = {
                 name : null,
-                email : null
+                email : true
 			}
 		}
 		render () {
@@ -54,7 +54,7 @@ class SignUpForm extends Component {
 									</div>
 									<section className="container-fluid form">
 										
-										{this.state.goFordward ?<NavLink to={"/Map"}className="btn btn-lg btn-block btn-lyft">iNGRESAR</NavLink>
+										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">iNGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
 										<label className="form-check-label">
 											 <a href=""><p>RESTABLECER CONTRASEÑA</p></a>
@@ -63,10 +63,9 @@ class SignUpForm extends Component {
 									</form>
 							</div>
 						</div>
-				
-				</div>
+                    </div>
 			</div>
 			);
 		}
 	}
-export default SignUpForm;
+export default SignUp;

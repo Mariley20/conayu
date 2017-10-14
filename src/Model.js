@@ -10,7 +10,6 @@ class Model {
 			name: null,
 			surname : null,
 			email : null,
-			phone : null
 		}
 		this.properties = data.properties;
 		this.activeProperty = data.properties[0]
@@ -19,10 +18,7 @@ class Model {
 		this.isRouting = false;
 		this.targetPlace = null;
 	}
-	addPhone() {
-		console.log("phone: "+this.userInfo.phone);
-		this.notify();
-	}
+	
 	setUserInfo (info) {
 		this.userInfo = info;
 		//Utils.store('lyft', this.userInfo);

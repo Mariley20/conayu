@@ -10,7 +10,7 @@ import './App.css';
 
 import Home from './Home';
 import SignUp from './SignUp';
-import Map from './Map';
+import DataMap from './Map';
 
 const App = (props) => {
 	const {model} =  props;
@@ -22,7 +22,7 @@ const App = (props) => {
 				       render={() => <Redirect to= {'/home'}/>}/>
 				<Route  path="/home" render={() => <Home model={model} />}/>
 				<Route  path="/signUp" render={() => <SignUp model={model} />}/>
-				<Route path="/map" render={() => <Map model={model}/>}/>
+				<Route path="/map" render={() => <DataMap model={model}/>}/>
 				<Route path='/hackathon-midis' render={() => <Redirect to="/home"  />}/>
 			</Switch>
 		</div>
