@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './img/logo-pink.png';
 import usuario from './img/usuario.png';
 import carro from './img/carro.png';
 import './App.css';
@@ -35,7 +34,7 @@ class HeaderMap extends Component {
 		return (
 			<header id="mapa_header">
 				<img className="img-responsive" id='usuario_logo' onClick={open} src={usuario} alt="" />
-				<img className="img-responsive" src={logo} alt="" />
+				
 				<span className="fa-stack fa-lg fa-2x">
 					<i className="fa fa-circle fa-stack-2x"></i>
 					<i className="fa fa-gift fa-stack-1x fa-inverse"></i>

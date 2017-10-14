@@ -9,8 +9,6 @@ import './Map.css'
 	NavLink,
 	Redirect
 } from 'react-router-dom'
-
-
 const DataMap = ({model}) => {
 
 	const state = {
@@ -54,6 +52,7 @@ const DataMap = ({model}) => {
 
 	return (<div>
 		<HeaderMap />
+		
 		<h2>MapLive </h2>
 		<div className="col-md-3 col-sm-3">
 			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
