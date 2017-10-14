@@ -57,7 +57,7 @@ class SignUpForm extends Component {
 										{this.state.goFordward ?<NavLink to={"/Map"}className="btn btn-lg btn-block btn-lyft">iNGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
 										<label className="form-check-label">
-											 <a href="lyft.com"><p>RESTABLECER CONTRASEÑA</p></a>
+											 <a href=""><p>RESTABLECER CONTRASEÑA</p></a>
 										</label>
 									</section>
 									</form>
