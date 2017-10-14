@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
-import './map.css'
+import './Map.css'
  import {
 	BrowserRouter,
 	Route,
