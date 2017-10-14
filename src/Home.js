@@ -11,10 +11,7 @@ const Home = () => (
             <p className="home-p">Te ayudamos,ayudar</p>
 
             <NavLink
-                to={"/signUp"} 
-                className="btn btn-warning"
->                Empezar
-
+                to={"/signUp"} className="btn btn-warning">Empezar
             </NavLink>
         </form>
 
