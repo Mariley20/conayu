@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
+import HeaderMap from './HeaderMap';
 import './Map.css'
  import {
 	BrowserRouter,
@@ -8,8 +9,6 @@ import './Map.css'
 	NavLink,
 	Redirect
 } from 'react-router-dom'
-
-
 const DataMap = ({model}) => {
 
 	const state = {
@@ -52,7 +51,8 @@ const DataMap = ({model}) => {
 	}
 
 	return (<div>
-
+		<HeaderMap />
+		
 		<h2>MapLive </h2>
 		<div className="col-md-3 col-sm-3">
 			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
@@ -69,9 +69,6 @@ const DataMap = ({model}) => {
 			isFiltering={isFiltering}
 			isRouting={isRouting}
 		/>
-
-
-
 	</div>);
 }
 

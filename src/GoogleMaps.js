@@ -96,10 +96,7 @@ const loadMaps = (cb) => {
 				}
 			});
 		}
-
 	}
-
-
 	 createMarkers(properties) {
 		 const { setActiveProperty, activeProperty } = this.props;
 		 const activePropertyIndex = activeProperty.index;
@@ -157,7 +154,6 @@ const loadMaps = (cb) => {
 		return (
 			<div className="mapContainer">
 				<div id="map" ref="map"></div>
-
 			</div>
 		);
 	}
