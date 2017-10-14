@@ -62,7 +62,7 @@ const DataMap = ({model}) => {
 		</div>
 		<GoogleMaps
 			model = {model}
-			properties={properties}
+			properties = {properties}
 			activeProperty={activeProperty}
 			setActiveProperty={setActiveProperty}
 			filteredProperties={filteredProperties}
