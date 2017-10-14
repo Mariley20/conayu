@@ -23,15 +23,15 @@ class SignUpForm extends Component {
 		constructor (props) {
 			super (props);
 			this.state = {
-				goFordward : false
+                name : null,
+                email : null
 			}
 		}
-	
 		render () {
 			const {model} = this.props;
 			const onInputChange = (e) => {
 				this.setState ({
-					goFordward: e.target.checked
+					name: e.target.checked
 				});
 			}
 			return (
@@ -43,12 +43,12 @@ class SignUpForm extends Component {
 								<form data-toggle="validator">
 									<div className="form-group row">
 										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">										
-											<input type="text" className="form-control inputName" placeholder="Usuario o correo" required/>
+											<input type="text" onChange={e => {this.state.name}} className="form-control inputName" placeholder="Usuario o correo" required/>
 										</div>
 									</div>
 									<div className="form-group row">
 										<div className="col-lg-12 col-md-12 input-group">							
-										<input type="email" className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
+										<input type="email" onChange={e => {this.state.email}} className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
 										</div>
 										<div className="help-block with-errors"></div>
 									</div>
