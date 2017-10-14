@@ -12,7 +12,7 @@ class HeaderApp extends Component{
 			<NavLink to="/Home"><span className="glyphicon glyphicon-chevron-left" />{<back/>}</NavLink>
 		</div>
 		<span className="glyphicon glyphicon-user"></span>
-		<h4 className="text-center">Ingresar</h4>
+		<h2 className="text-center">Ingresar</h2>
 		<hr/>
 	  </header>);
 	}
@@ -54,7 +54,7 @@ class SignUpForm extends Component {
 									</div>
 									<section className="container-fluid form">
 										
-										{this.state.goFordward ?<NavLink to={"/lyftmap"}className="btn btn-lg btn-block btn-lyft">iNGRESAR</NavLink>
+										{this.state.goFordward ?<NavLink to={"/Map"}className="btn btn-lg btn-block btn-lyft">iNGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
 										<label className="form-check-label">
 											 <a href="lyft.com"><p>RESTABLECER CONTRASEÑA</p></a>
