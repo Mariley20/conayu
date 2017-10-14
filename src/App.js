@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {
+	BrowserRouter,
+	Route,
+	Switch,
+	NavLink,
+	Redirect
+} from 'react-router-dom'
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+import Home from './Home';
+import SignUp from './SignUp';
+import Map from './Map';
+
+const App = (props) => {
+	const {model} =  props;
+	console.log('app.props', props)
+	return (<BrowserRouter>
+		<div>
+			<Switch>
+				<Route exact path="/"
+				       render={() => <Redirect to= {'/home'}/>}/>
+				<Route  path="/home" render={() => <Home model={model} />}/>
+				<Route  path="/signUp" render={() => <SignUp model={model} />}/>
+				<Route path="/map" render={() => <Map model={model}/>}/>
+				<Route path='/hackathon-midis' render={() => <Redirect to="/home"  />}/>
+			</Switch>
+		</div>
+	</BrowserRouter>)
 }
 
 export default App;
+
