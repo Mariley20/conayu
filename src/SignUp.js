@@ -9,10 +9,9 @@ class HeaderApp extends Component{
 	render(){return(
 	  <header>
 		<div className="btnVolver">
-			<NavLink to="/Home"><span className="glyphicon glyphicon-chevron-left" />{<back/>}</NavLink>
+			<NavLink to="/Home"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		</div>
-		<span className="glyphicon glyphicon-user"></span>
-		<h2 className="text-center">Ingresar</h2>
+		<h3 className="signuph2 text-center">Ingresar</h3>
 		{/* <hr/> */}
 	  </header>);
 	}
@@ -49,7 +48,7 @@ class SignUp extends Component {
 									</div>
 									<div className="form-group row">
 										<div className="col-lg-12 col-md-12 input-group">
-											<span className="input-group-addon"><i className="fa fa-key fa-fw"></i></span>							
+											<span className="input-group-addon"><i className="fa fa-key fa-fw lock"></i></span>							
 											<input type="password" onChange={e => {this.state.email}} className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
 										</div>
 										<div className="help-block with-errors"></div>
@@ -64,10 +63,10 @@ class SignUp extends Component {
 										</label>
 									</section>
 									</form>
-									<div>
+									<div className="singupbtn">
 										<p>Acceso rápido</p>
-										<button><i className="fa fa-google-plus-square" aria-hidden="true"></i>GOOGLE</button>
-										<button><i className="fa fa-facebook-official" aria-hidden="true"></i>FACEBOOK</button>
+										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
+										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 									</div>
 							</div>
 						</div>
