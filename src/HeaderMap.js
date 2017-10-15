@@ -4,13 +4,7 @@ import usuario from './img/usuario.png';
 import './App.css';
 import './Map.css';
 
-import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
-} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 class HeaderMap extends Component {
 	constructor(props) {
 		super(props);
@@ -31,7 +25,7 @@ class HeaderMap extends Component {
 			})
 		}
 		const onPathBntClick = () => {
-		model.setFilter(10);
+			model.setFilter(10);
 		}
 		return (
 			<header id="mapa_header">
@@ -43,6 +37,8 @@ class HeaderMap extends Component {
 				<div id="mySidenav" className="sidenav" style={{ width: this.state.show ? '250px' : 0 }}>
 					<a href="javascript:void(0)" className="closebtn" onClick={close}>&times;</a>
 					<div id="datos_usuario">
+						<NavLink to={"/momFeed"} className="btn btn-warning">Alimentate Mamá</NavLink>
+						<NavLink to={"/bebyFeed"} className="btn btn-warning">Alimentate Bebe </NavLink>
 					</div>
 				</div>
 			</header>
