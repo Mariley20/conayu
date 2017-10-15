@@ -25,8 +25,9 @@ class BabyFeed extends Component {
           <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
               <div className="Hierro proporciones">
-                <h3>Proporciones:</h3>
-                <p>Dale comidas espesas 5 veces al dia</p>
+                <h3>Comidas espesas 5 veces al dia</h3>
+                <p>papillas, Zapallo con lentejitas y papitas, papas con frejoles y zanahoria</p>
+                <p>a cocción, picadas en rodajas o cuadradas</p>
               </div>
               <div className="Hierro">
                 <h3>Incluye en tus comidas alimentos de origen animal ricos en hierro</h3>
