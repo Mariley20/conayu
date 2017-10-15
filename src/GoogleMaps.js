@@ -21,6 +21,7 @@ const loadMaps = (cb) => {
 			markers: []
 		};
 		this.autocompleteDestino = null;
+		this.cont=1;
 	}
 
 	componentWillMount() {
@@ -43,7 +44,7 @@ const loadMaps = (cb) => {
 
 		this.map = new window.google.maps.Map(this.refs.map, {
 			center: { lat: latitude, lng: longitude },
-			zoom: 15,
+			zoom: 11,
 			mapTypeControl: false
 		});
 
@@ -55,11 +56,9 @@ const loadMaps = (cb) => {
 			console.log("MarkersService.getMarkers() :", err, data);
 			self.createMarkers(properties, data);
 		});
-
+		
 
 	}
-
-
 
 	showInfoWindow(index) {
 		const { markers } = this.state;
@@ -115,21 +114,36 @@ const loadMaps = (cb) => {
 		 var self = this;
 
 		 console.log("propertis:", properties);
+		 console.log('arrayDatas:', data);
 		 
-		 properties.map((property) => {
-			 const { latitude, longitude, index, address } = property;
-				 
+		//   properties.map((property) => {
+		// 	 const { latitude, longitude, index, address } = property;
+				       
+		// 	 const iw = new window.google.maps.InfoWindow({
+		
+		// 		content: `<div>${data[0].distritos[1].nombre}</div>`,
+				
+				
+		// 	 }); 
 
-			 properties --> data
-			 const iw = new window.google.maps.InfoWindow({
-				 content: `<div>${data[0].provincia}</div>`,
-			 });
+			 properties.map((property, id) => {
+				const { latitude, longitude, index, address } = property;
+				let dis=data[0].distritos[id].nombre;
+	
+				
+				console.log(dis);
+				
+				const iw = new window.google.maps.InfoWindow({
+					
+				   content: `<div>${dis}</div>`,
+		
+				});
 
 			 this.marker = new window.google.maps.Marker({
 				 position: { lat: latitude, lng: longitude },
 				 map: this.map,
 				 label: {
-					 color: '#333',
+					 color: '#56378a',
 					 text: `${index + 1}`,
 				 },
 				 icon: {
