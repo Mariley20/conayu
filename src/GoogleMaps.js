@@ -41,7 +41,7 @@ let icons=[{
 {
 	// rojo
 	url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
-	size: new window.google.maps.Size(50, 55),
+	size: new window.google.maps.Size(40, 50),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
