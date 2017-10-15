@@ -201,3 +201,16 @@
   list-style: none;
   
 }
+#datos_usuario{
+position: absolute;
+bottom: 10px;
+}
+.btn-warning{
+  margin: 10px;
+}
+#usuario_logo {
+  position: absolute;
+  position: absolute;
+  left: 63px;
+  top: 15px;
+}
