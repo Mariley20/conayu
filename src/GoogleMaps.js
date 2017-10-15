@@ -14,7 +14,7 @@ const loadMaps = (cb) => {
 let icons=[{
 	// verde
 	url:'http://www.jambajuice.com/images/www/tempIMGs/icn_marker.png',
-	size: new window.google.maps.Size(50, 55),
+	size: new window.google.maps.Size(20, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -23,7 +23,7 @@ let icons=[{
 {
 	// amarillo
 	url: 'https://www.fpx.com/hubfs/_Success/_Images/Icons/location-map.png?t=1507908179820',
-	size: new window.google.maps.Size(50, 55),
+	size: new window.google.maps.Size(20, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -32,7 +32,7 @@ let icons=[{
 { 
 	// naranja
 	url: 'http://www.welcomecottages.com/assets/propdetails-map-indicator.png',
-	size: new window.google.maps.Size(50, 55),
+	size: new window.google.maps.Size(20, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).

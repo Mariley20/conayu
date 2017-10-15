@@ -20,7 +20,10 @@ class BabyFeed extends Component {
       }
     return (
         <div className="container text-center momFeed">
-          <h1>Alimentación del Bebe</h1>
+          <div className="btnVolver">
+			      <NavLink to="/mapa"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
+		      </div>
+          <h1>Alimentación del Bebé</h1>
           <hr className="linea" />
           <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
