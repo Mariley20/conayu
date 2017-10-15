@@ -128,14 +128,17 @@ const loadMaps = (cb) => {
 
 			 properties.map((property, id) => {
 				const { latitude, longitude, index, address } = property;
-				let dis=data[0].distritos[id].nombre;
-	
-				
-				console.log(dis);
+				let place=data[0].distritos[id].nombre;
+				let age=data[0].distritos[id].edad;
+				let evaluate=data[0].distritos[id].Evaluados;
+				let leve=data[0].distritos[id].leve;
+				let moderada=data[0].distritos[id].moderada;
+				let severa=data[0].distritos[id].severa;
+				let percent=data[0].distritos[id].porcentaje;
 				
 				const iw = new window.google.maps.InfoWindow({
 					
-				   content: `<div>${dis}</div>`,
+				   content: `<div>${place}<ul><li>${age}</li><li>${evaluate}</li><li>${leve}</li><li>${moderada}</li><li>${severa}</li><li>${percent}</li></ul></div>`,
 		
 				});
 
