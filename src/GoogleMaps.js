@@ -11,11 +11,10 @@ const loadMaps = (cb) => {
 	document.body.appendChild(script)
 
 }
-
 let icons=[{
 	// verde
-	url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/564px-Map_pin_icon_green.svg.png',
-	size: new window.google.maps.Size(22, 55),
+	url:'http://www.jambajuice.com/images/www/tempIMGs/icn_marker.png',
+	size: new window.google.maps.Size(50, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -23,8 +22,8 @@ let icons=[{
 },
 {
 	// amarillo
-	url: 'https://image.flaticon.com/icons/svg/553/553279.svg',
-	size: new window.google.maps.Size(22, 55),
+	url: 'https://www.fpx.com/hubfs/_Success/_Images/Icons/location-map.png?t=1507908179820',
+	size: new window.google.maps.Size(50, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -32,8 +31,8 @@ let icons=[{
 },
 { 
 	// naranja
-	url: 'http://icon-park.com/imagefiles/location_map_pin_orange6-152x200.png',
-	size: new window.google.maps.Size(22, 55),
+	url: 'http://www.welcomecottages.com/assets/propdetails-map-indicator.png',
+	size: new window.google.maps.Size(50, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -41,8 +40,8 @@ let icons=[{
 },
 {
 	// rojo
-	url: 'https://image.flaticon.com/icons/svg/535/535137.svg',
-	size: new window.google.maps.Size(22, 55),
+	url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
+	size: new window.google.maps.Size(50, 55),
 	// The origin for this image is (0, 0).
 	origin: new window.google.maps.Point(0, -15),
 	// The anchor for this image is the base of the cross at (11, 52).
@@ -81,7 +80,7 @@ let icons=[{
 
 		this.map = new window.google.maps.Map(this.refs.map, {
 			center: { lat: latitude, lng: longitude },
-			zoom: 11,
+			zoom: 10,
 			mapTypeControl: false
 		});
 
@@ -181,18 +180,24 @@ let icons=[{
 					 //text: `${index + 1}`,
 				 },
 
-				//  icon:icons[3].url,
-				//  icon: percent<=5?icons[0]:(percent>5&&percent<=20?icons[1]:(percent<20&&percent<=40?icons[2]:icons[3].url)),
-				//  property,
+				//  icon:icons[3],
+				
+				icon:(percent<=5)?icons[0]:(percent<=5 && percent<20)?icons[1]:(percent>=20 && percent<40?icons[2]:(percent>40?icons[3]:"de")),
+				
+				//  icon: percent<=5?icons[0]:(percent>5 && percent<=20?icons[1]:(percent<20 && percent<=40?icons[2]:percent>40?icons[3]:"de")),
+				 property,
 
-				 icon: {
-					 url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
-					 size: new window.google.maps.Size(22, 40),
-					 // The origin for this image is (0, 0).
-					 origin: new window.google.maps.Point(0, -15),
-					 // The anchor for this image is the base of the cross at (11, 52).
-					 anchor: new window.google.maps.Point(11, 52),
-				 },
+
+				
+
+				//  icon: {
+				// 	 url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
+				// 	 size: new window.google.maps.Size(22, 40),
+				// 	 // The origin for this image is (0, 0).
+				// 	 origin: new window.google.maps.Point(0, -15),
+				// 	 // The anchor for this image is the base of the cross at (11, 52).
+				// 	 anchor: new window.google.maps.Point(11, 52),
+				//  },
 				property,
 				
 			 });
