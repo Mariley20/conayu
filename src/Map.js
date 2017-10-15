@@ -10,7 +10,6 @@ import './Map.css'
 	Redirect
 } from 'react-router-dom'
 const DataMap = ({model}) => {
-
 	const state = {
 		properties: model.properties,
 		activeProperty: model.activeProperty,
@@ -53,12 +52,9 @@ const DataMap = ({model}) => {
 	return (<div>
 		<HeaderMap />
 		
-		<h1 className="conayus-name">CONAYUS</h1>
+		<h1 className="conayus-name">YANAPA</h1>
 		<div className="col-md-3 col-sm-3 filtro">
-			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
-				<i className="fa fa-bicycle" aria-hidden="true"></i>
-				Anemia Severa
-			</button>
+			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>Anemia Severa</button>
 		</div>
 		<GoogleMaps
 			model = {model}

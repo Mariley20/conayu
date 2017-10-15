@@ -11,7 +11,7 @@ class HeaderApp extends Component{
 		<div className="btnVolver">
 			<NavLink to="/Home"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		</div>
-		<h1 className="conayus-name">CONAYUS</h1>
+		<h1 className="conayus-name">YANAPA</h1>
 		<h3 className="signuph2 text-center">Ingresar</h3>
 		{/* <hr/> */}
 	  </header>);
