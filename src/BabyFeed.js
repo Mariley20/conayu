@@ -21,7 +21,7 @@ class BabyFeed extends Component {
     return (
         <div className="container text-center momFeed">
           <div className="btnVolver">
-			      <NavLink to="/mapa"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
+			      <NavLink to="/map"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		      </div>
           <h1>Alimentación del Bebé</h1>
           <hr className="linea" />
