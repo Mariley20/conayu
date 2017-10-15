@@ -12,6 +12,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 2,
            carSpaces: 2,
+           porcentaje: 29.9
        },
        {
            _id: '593e9297ec4cca9c56bf61af',
@@ -25,6 +26,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 1,
            carSpaces: 0,
+           porcentaje: 58.7
        },
        {
            _id: '593e929773c71925e5d7c11c',
@@ -38,6 +40,7 @@ const data = {
            bedrooms: 3,
            bathrooms: 2,
            carSpaces: 0,
+           porcentaje: 39.5
        },
        {
            _id: '593e92973d4d15eedb129aee',
@@ -51,6 +54,7 @@ const data = {
            bedrooms: 3,
            bathrooms: 2,
            carSpaces: 0,
+           porcentaje: 39.5
        },
        {
            _id: '593e929728b7f8543b7907e1',
@@ -64,6 +68,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 1,
            carSpaces: 1,
+           porcentaje: 58.8
        },
        {
         _id: '593e92975996a6263d146444',
@@ -77,6 +82,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 48.1
     },
        {
            _id: '593e92975996a6263d146444',
@@ -90,6 +96,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 1,
            carSpaces: 1,
+           porcentaje: 41.4
        },
        {
            _id: '593e9297a13e246da5ba0884',
@@ -103,6 +110,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 2,
            carSpaces: 2,
+           porcentaje: 49.6
        },
        {
            _id: '593e9297afa51a013fcd07d5',
@@ -116,6 +124,7 @@ const data = {
            bedrooms: 4,
            bathrooms: 1,
            carSpaces: 1,
+           porcentaje: 42.8
        },
        {
            _id: '593e92972bd8fd05f2ab1a89',
@@ -129,6 +138,7 @@ const data = {
            bedrooms: 3,
            bathrooms: 1,
            carSpaces: 0,
+           porcentaje: 55.3
        },
        {
            _id: '593e9297fe2e6d32c859ecf4',
@@ -142,6 +152,7 @@ const data = {
            bedrooms: 2,
            bathrooms: 1,
            carSpaces: 1,
+           porcentaje: 42.9
        },      
        {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -155,6 +166,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 60.9
     },    
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -168,6 +180,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 42.1
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -181,6 +194,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 57.1
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -194,6 +208,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 70.6
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -207,6 +222,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 47.1
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -220,6 +236,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 22
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -233,6 +250,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 55.6
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -246,6 +264,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 23.1
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -259,6 +278,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 22.2
     },  
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -272,6 +292,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 22.2
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -285,6 +306,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 44.3
     }, 
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -298,6 +320,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 44.1
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -311,6 +334,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 50.7
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -324,6 +348,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 58.2
     }, 
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -337,6 +362,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 28
     },                     
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -350,6 +376,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 59.6
     },
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -363,6 +390,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 55.6
     },  
     {
         _id: '593e9297fe2e6d32c859ecf4',
@@ -376,6 +404,7 @@ const data = {
         bedrooms: 2,
         bathrooms: 1,
         carSpaces: 1,
+        porcentaje: 55.7
     },  
    ],
 };

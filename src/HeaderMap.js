@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import usuario from './img/usuario.png';
-import carro from './img/carro.png';
 import './App.css';
 import './Map.css';
 
@@ -31,6 +30,7 @@ class HeaderMap extends Component {
 				show: false
 			})
 		}
+
 		return (
 			<header id="mapa_header">
 				<img className="img-responsive" id='usuario_logo' onClick={open} src={usuario} alt="" />
