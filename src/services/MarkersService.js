@@ -10,7 +10,5 @@ export default class MarkersService {
 			if(error) return callback(error);
 			return callback(null, response.body);
 		});
-
     }
-
 }

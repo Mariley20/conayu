@@ -120,7 +120,7 @@ const loadMaps = (cb) => {
 			 const { latitude, longitude, index, address } = property;
 				 
 
-			 properties --> data
+			// properties --> data
 			 const iw = new window.google.maps.InfoWindow({
 				 content: `<div>${data[0].provincia}</div>`,
 			 });
