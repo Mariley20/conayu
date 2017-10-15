@@ -15,7 +15,7 @@ class Home extends Component {
 			const {model} = this.props;
     return (<div className="home-container">
         <form>
-            <h1>CONAYUS</h1>
+            <h1 className="conayus-home">CONAYUS</h1>
             <h5 className="home-p">#Teayudamosaayudar</h5>
             <NavLink
                 to={"/signUp"} className="btn btn-warning">Empezar

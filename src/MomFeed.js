@@ -31,7 +31,7 @@ class MomFeed extends Component {
                 <p><label>Lentejas</label><label>Habas</label><label>Frejol</label></p>
                 <p className="p2"><strong>5 cucharadas por c/u</strong></p>
               </div>
-              <div className="Verduras verduras-mama">
+              <div className="Verduras">
                 <h3>Come verduras y frutas de colores cada día</h3>
                 <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>

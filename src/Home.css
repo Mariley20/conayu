@@ -10,7 +10,9 @@ body{
     
 
 }
-
+.conayus-home{
+    text-shadow:5px 5px 10px black;
+}
 body .home-container{
     font-family: 'Fredoka One', cursive;
     text-align: center;
