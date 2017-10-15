@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Home.css';
+import './Feed.css';
 import { NavLink} from 'react-router-dom'
 
 class MomFeed extends Component {

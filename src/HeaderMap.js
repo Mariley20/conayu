@@ -38,7 +38,7 @@ class HeaderMap extends Component {
 					<a href="javascript:void(0)" className="closebtn" onClick={close}>&times;</a>
 					<div id="datos_usuario">
 						<NavLink to={"/momFeed"} className="btn btn-warning">Alimentate Mamá</NavLink>
-						<NavLink to={"/bebyFeed"} className="btn btn-warning">Alimentate Bebe </NavLink>
+						<NavLink to={"/babyFeed"} className="btn btn-warning">Alimentate Bebe </NavLink>
 					</div>
 				</div>
 			</header>
