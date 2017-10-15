@@ -1,4 +1,5 @@
 import React from 'react';
+import MarkersService from "./services/MarkersService";
 
 const loadMaps = (cb) => {
 	// window.google.maps script loading garbage
@@ -23,17 +24,22 @@ const loadMaps = (cb) => {
 	}
 
 	componentWillMount() {
+
+		var self = this;
+
 		if (!window.google) {
 			loadMaps(() => {
-				this.forceUpdate();
+				self.forceUpdate();
 				console.log ('_mapsLoaded', window.google);
 			})
 		}
+		
 	}
 
 	componentDidMount() {
 		const { properties, activeProperty } = this.props;
 		const { latitude, longitude } = activeProperty;
+		var self = this;
 
 		this.map = new window.google.maps.Map(this.refs.map, {
 			center: { lat: latitude, lng: longitude },
@@ -45,7 +51,10 @@ const loadMaps = (cb) => {
 		this.directionsDisplay = new window.google.maps.DirectionsRenderer;
 		this.directionsDisplay.setMap(this.map);
 
-		this.createMarkers(properties);
+		MarkersService.getMarkers(function(err, data){
+			console.log("MarkersService.getMarkers() :", err, data);
+			self.createMarkers(properties, data);
+		});
 
 
 	}
@@ -54,6 +63,7 @@ const loadMaps = (cb) => {
 
 	showInfoWindow(index) {
 		const { markers } = this.state;
+
 		markers[index] && markers[index].iw.open(this.map, markers[index]);
 	}
 
@@ -97,22 +107,29 @@ const loadMaps = (cb) => {
 			});
 		}
 	}
-	 createMarkers(properties) {
+	 createMarkers(properties, data) {
 		 const { setActiveProperty, activeProperty } = this.props;
 		 const activePropertyIndex = activeProperty.index;
 		 const { markers } = this.state;
 
+		 var self = this;
+
+		 console.log("propertis:", properties);
+		 
 		 properties.map((property) => {
 			 const { latitude, longitude, index, address } = property;
+				 
+
+			 properties --> data
 			 const iw = new window.google.maps.InfoWindow({
-				 content: `<h1>${address}</h1>`,
+				 content: `<div>${data[0].provincia}</div>`,
 			 });
 
 			 this.marker = new window.google.maps.Marker({
 				 position: { lat: latitude, lng: longitude },
 				 map: this.map,
 				 label: {
-					 color: '#fff',
+					 color: '#333',
 					 text: `${index + 1}`,
 				 },
 				 icon: {
