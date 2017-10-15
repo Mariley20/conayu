@@ -10,74 +10,36 @@ class MomFeed extends Component {
 		}
 		render () {
       const {model} = this.props;
-
-      var images =  [];
-
-      for(var i=1; i<=24; i++){
-        images.push(
-          <img src={"/images/" + i + "b.PNG"} />
-        )
-      }
-
+    
     return (
-        <div id="accordion" role="tablist">
-        <div className="card">
-          <div className="card-header" role="tab" id="headingOne">
-            <h5 className="mb-0">
-              <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Dale comidas espesas 5 veces al día
-              </a>
-            </h5>
-          </div>
-      
-          <div id="collapseOne" className="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-            <div className="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header" role="tab" id="headingTwo">
-            <h5 className="mb-0">
-              <a className="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Collapsible Group Item #2
-              </a>
-            </h5>
-          </div>
-          <div id="collapseTwo" className="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div className="card-body">
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header" role="tab" id="headingThree">
-            <h5 className="mb-0">
-              <a className="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </a>
-            </h5>
-          </div>
-          <div id="collapseThree" className="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-            <div className="card-body">
-              <img src={"/images/" + "1" + ".PNG"} />
+        <div className="container text-center momFeed">
+          <h1>Alimentación Materna</h1>
+          <hr className="linea" />
+          <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
+          <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
+          <div className="Hierro proporciones">
+                <h3>Prepara comidas Nutritivas</h3>
+                <p>Arroz con Frejolitos y Pescado, Arroz con Higado y puré de Zapallo, Sangrecita con Quinua</p>
+                <p className="cursiva">Acompañado con verduras</p>
               </div>
-          </div>
-        </div>
-        <div className="card">
-          <div className="card-header" role="tab" id="headingThree">
-            <h5 className="mb-0">
-              <a className="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Collapsible Group Item #3
-              </a>
-            </h5>
-          </div>
-          <div id="collapseThree" className="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-            <div className="card-body">
-              <img src={"/images/" + "1" + ".PNG"} />
+              <div className="Hierro">
+                <h3>Incluye en tus comidas alimentos de origen animal ricos en hierro</h3>
+                <p><label>Higado</label><label>Pescado</label><label>Sangrecita</label><label>Riñon</label><label>Bazo</label></p>
+                <p><label>Lentejas</label><label>Habas</label><label>Frejol</label></p>
+                <p className="p2"><strong>5 cucharadas por c/u</strong></p>
+
               </div>
-          </div>
-        </div>
+              <div className="Verduras">
+                <h3>Come verduras y frutas de colores cada día</h3>
+                <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
+                <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
+              </div>
+                    <div><img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
+                {/* <div className="row platos">
+                  <div className="col col-sm-4  "><img className="img-fluid" src={"/images/" + "1m" + ".PNG"} /></div>
+                  <div className="col col-sm-4"><img className="img-fluid" src={"/images/" + "2m" + ".PNG"} /></div>
+                  <div className="col col-sm-4"><img className="img-fluid" src={"/images/" + "3m" + ".PNG"} /></div>
+              </div> */}
       </div>
     )
     }
