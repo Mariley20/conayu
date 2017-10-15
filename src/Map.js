@@ -54,10 +54,10 @@ const DataMap = ({model}) => {
 		<HeaderMap />
 		
 		<h2>MapLive </h2>
-		<div className="col-md-3 col-sm-3">
+		<div className="col-md-3 col-sm-3 filtro">
 			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
 				<i className="fa fa-bicycle" aria-hidden="true"></i>
-				Filtrar solo los primeros 5
+				Anemia Severa
 			</button>
 		</div>
 		<GoogleMaps

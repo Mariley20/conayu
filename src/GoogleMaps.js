@@ -12,6 +12,43 @@ const loadMaps = (cb) => {
 
 }
 
+let icons=[{
+	// verde
+	url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/564px-Map_pin_icon_green.svg.png',
+	size: new window.google.maps.Size(22, 55),
+	// The origin for this image is (0, 0).
+	origin: new window.google.maps.Point(0, -15),
+	// The anchor for this image is the base of the cross at (11, 52).
+	anchor: new window.google.maps.Point(11, 52),
+},
+{
+	// amarillo
+	url: 'https://image.flaticon.com/icons/svg/553/553279.svg',
+	size: new window.google.maps.Size(22, 55),
+	// The origin for this image is (0, 0).
+	origin: new window.google.maps.Point(0, -15),
+	// The anchor for this image is the base of the cross at (11, 52).
+	anchor: new window.google.maps.Point(11, 52),
+},
+{ 
+	// naranja
+	url: 'http://icon-park.com/imagefiles/location_map_pin_orange6-152x200.png',
+	size: new window.google.maps.Size(22, 55),
+	// The origin for this image is (0, 0).
+	origin: new window.google.maps.Point(0, -15),
+	// The anchor for this image is the base of the cross at (11, 52).
+	anchor: new window.google.maps.Point(11, 52),
+},
+{
+	// rojo
+	url: 'https://image.flaticon.com/icons/svg/535/535137.svg',
+	size: new window.google.maps.Size(22, 55),
+	// The origin for this image is (0, 0).
+	origin: new window.google.maps.Point(0, -15),
+	// The anchor for this image is the base of the cross at (11, 52).
+	anchor: new window.google.maps.Point(11, 52),
+}
+];
 
  class GoogleMaps extends React.Component {
 	constructor(props) {
@@ -21,6 +58,7 @@ const loadMaps = (cb) => {
 			markers: []
 		};
 		this.autocompleteDestino = null;
+		this.cont=1;
 	}
 
 	componentWillMount() {
@@ -43,7 +81,7 @@ const loadMaps = (cb) => {
 
 		this.map = new window.google.maps.Map(this.refs.map, {
 			center: { lat: latitude, lng: longitude },
-			zoom: 15,
+			zoom: 11,
 			mapTypeControl: false
 		});
 
@@ -55,11 +93,9 @@ const loadMaps = (cb) => {
 			console.log("MarkersService.getMarkers() :", err, data);
 			self.createMarkers(properties, data);
 		});
-
+		
 
 	}
-
-
 
 	showInfoWindow(index) {
 		const { markers } = this.state;
@@ -115,32 +151,50 @@ const loadMaps = (cb) => {
 		 var self = this;
 
 		 console.log("propertis:", properties);
+		 console.log('arrayDatas:', data);
 		 
-		 properties.map((property) => {
-			 const { latitude, longitude, index, address } = property;
-				 
-
-			// properties --> data
-			 const iw = new window.google.maps.InfoWindow({
-				 content: `<div>${data[0].provincia}</div>`,
-			 });
+		properties.map((property, id) => {
+				const { latitude, longitude, index, address } = property;
+				let provincia =  data[0].provincia;
+				let place=data[0].distritos[id].nombre;
+				let age=data[0].distritos[id].edad;
+				let evaluate=data[0].distritos[id].Evaluados;
+				let leve=data[0].distritos[id].leve;
+				let moderada=data[0].distritos[id].moderada;
+				let severa=data[0].distritos[id].severa;
+				let percent=data[0].distritos[id].porcentaje;
+				
+				parseInt(percent);
+				
+				
+				const iw = new window.google.maps.InfoWindow({
+					
+				   content: `<div><h5>${provincia}</h5><h6>Distrito: ${place}</h6><ul classname="points"><li><b>${age}</b></li><li>Total de evaluados: <b>${evaluate}</b></li><li><img src="http://www.uam.es/StaticFiles/UniversidadAutonomaMadrid//img/punto_verde.png"/> Anemia Leve: <b>${leve}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoAmarillo.png"/> Anemia Moderada: <b>${moderada}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoRojo.png"/> Anemia Severa: <b>${severa}</b></li><li>Promedio: <b>${percent+"%"}</b></li></ul></div>`,
+		
+				});
 
 			 this.marker = new window.google.maps.Marker({
 				 position: { lat: latitude, lng: longitude },
 				 map: this.map,
 				 label: {
-					 color: '#333',
-					 text: `${index + 1}`,
+					 color: '#56378a',
+					 //text: `${index + 1}`,
 				 },
+
+				//  icon:icons[3].url,
+				//  icon: percent<=5?icons[0]:(percent>5&&percent<=20?icons[1]:(percent<20&&percent<=40?icons[2]:icons[3].url)),
+				//  property,
+
 				 icon: {
-					 url: 'https://ihatetomatoes.net/react-tutorials/google-maps/images/img_map-marker.png',
-					 size: new window.google.maps.Size(22, 55),
+					 url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
+					 size: new window.google.maps.Size(22, 40),
 					 // The origin for this image is (0, 0).
 					 origin: new window.google.maps.Point(0, -15),
 					 // The anchor for this image is the base of the cross at (11, 52).
 					 anchor: new window.google.maps.Point(11, 52),
 				 },
-				 property,
+				property,
+				
 			 });
 
 			 this.marker.iw = iw;

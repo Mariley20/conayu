@@ -30,9 +30,6 @@ class HeaderMap extends Component {
 				show: false
 			})
 		}
-		const onPathBntClick = () => {
-		model.setFilter(10);
-		}
 		return (
 			<header id="mapa_header">
 				<img className="img-responsive" id='usuario_logo' onClick={open} src={usuario} alt="" />

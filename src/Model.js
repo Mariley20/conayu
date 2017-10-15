@@ -41,7 +41,7 @@ class Model {
 	setFilter (param) {
 		this.isFiltering = true;
 		console.log ('before filter:', this.properties.length);
-		this.filteredProperties = this.properties.filter( (item) =>  item.bedrooms == 2);
+		this.filteredProperties = this.properties.filter( (item) =>  item.porcentaje > 40);
 		console.log ('after filter:', this.filteredProperties.length);
 		this.notify();
 	}
