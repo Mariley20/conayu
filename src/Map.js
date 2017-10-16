@@ -51,7 +51,7 @@ const DataMap = ({model}) => {
 	}
 	const onPathMoBntClick = () => {
 		
-		model.setFilterMo(5);
+		model.setFilterMo(10);
 	}
 
 	return (<div>

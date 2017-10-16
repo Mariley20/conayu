@@ -178,33 +178,9 @@ let icons=[{
 				 label: {
 					 color: '#56378a',
 					 //text: `${index + 1}`,
-				 },
-
-				//  icon:icons[3],
-				
-				icon:(percent<=5)?icons[0]:(percent<=5 && percent<20)?icons[1]:(percent>=20 && percent<40?icons[2]:(percent>40?icons[3]:"de")),
-				
-				//  icon: percent<=5?icons[0]:(percent>5 && percent<=20?icons[1]:(percent<20 && percent<=40?icons[2]:percent>40?icons[3]:"de")),
-				 property,
-
-
-				mama:{
-					url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
-					 size: new window.google.maps.Size(22, 40),
-					 // The origin for this image is (0, 0).
-					 origin: new window.google.maps.Point(0, -15),
-					 // The anchor for this image is the base of the cross at (11, 52).
-					 anchor: new window.google.maps.Point(11, 52),
-				}
-
-				//  icon: {
-				// 	 url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
-				// 	 size: new window.google.maps.Size(22, 40),
-				// 	 // The origin for this image is (0, 0).
-				// 	 origin: new window.google.maps.Point(0, -15),
-				// 	 // The anchor for this image is the base of the cross at (11, 52).
-				// 	 anchor: new window.google.maps.Point(11, 52),
-				//  },
+				 },								
+				icon:(percent<=5)?icons[0]:(percent<=5 && percent<20)?icons[1]:(percent>=20 && percent<40?icons[2]:(percent>40?icons[3]:"de")),			
+				 property,		
 				
 			 });
 
