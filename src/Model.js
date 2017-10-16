@@ -55,6 +55,14 @@ class Model {
 		this.notify();
 	}
 
+	setFilterAll (param) {
+		this.isFiltering = true;
+		console.log ('before filter:', this.properties.length);
+		this.filteredProperties = this.properties;			
+	
+		this.notify();
+	}
+
 	setIsRouting ( ) {
 		this.isRouting = true;
 		this.notify();
