@@ -49,169 +49,169 @@ let icons = [{
     }
 ];
 
-class GoogleMaps extends React.Component {
-    constructor(props) {
-        super(props);
+ class GoogleMaps extends React.Component {
+	constructor(props) {
+		super(props);
 
-        this.state = {
-            markers: []
-        };
-        this.autocompleteDestino = null;
-        this.cont = 1;
-    }
+		this.state = {
+			markers: []
+		};
+		this.autocompleteDestino = null;
+		this.cont=1;
+	}
 
-    componentWillMount() {
+	componentWillMount() {
 
-        var self = this;
+		var self = this;
 
-        if (!window.google) {
-            loadMaps(() => {
-                self.forceUpdate();
-                console.log('_mapsLoaded', window.google);
-            })
-        }
+		if (!window.google) {
+			loadMaps(() => {
+				self.forceUpdate();
+				console.log ('_mapsLoaded', window.google);
+			})
+		}
+		
+	}
 
-    }
+	componentDidMount() {
+		const { properties, activeProperty } = this.props;
+		const { latitude, longitude } = activeProperty;
+		var self = this;
 
-    componentDidMount() {
-        const { properties, activeProperty } = this.props;
-        const { latitude, longitude } = activeProperty;
-        var self = this;
+		this.map = new window.google.maps.Map(this.refs.map, {
+			center: { lat: latitude, lng: longitude },
+			zoom: 10,
+			mapTypeControl: false
+		});
 
-        this.map = new window.google.maps.Map(this.refs.map, {
-            center: { lat: latitude, lng: longitude },
-            zoom: 10,
-            mapTypeControl: false
-        });
+		this.directionsService = new window.google.maps.DirectionsService;
+		this.directionsDisplay = new window.google.maps.DirectionsRenderer;
+		this.directionsDisplay.setMap(this.map);
 
-        this.directionsService = new window.google.maps.DirectionsService;
-        this.directionsDisplay = new window.google.maps.DirectionsRenderer;
-        this.directionsDisplay.setMap(this.map);
+		MarkersService.getMarkers(function(err, data){
+			console.log("MarkersService.getMarkers() :", err, data);
+			self.createMarkers(properties, data);
+		});
+		
 
-        MarkersService.getMarkers(function(err, data) {
-            console.log("MarkersService.getMarkers() :", err, data);
-            self.createMarkers(properties, data);
-        });
+	}
 
+	showInfoWindow(index) {
+		const { markers } = this.state;
 
-    }
+		markers[index] && markers[index].iw.open(this.map, markers[index]);
+	}
 
-    showInfoWindow(index) {
-        const { markers } = this.state;
+	componentWillReceiveProps(nextProps) {
+		const { activeProperty, filteredProperties, isFiltering } = nextProps;
+		const { index } = activeProperty;
 
-        markers[index] && markers[index].iw.open(this.map, markers[index]);
-    }
+		// Hide all the other info boxes
+		this.hideAll();
 
-    componentWillReceiveProps(nextProps) {
-        const { activeProperty, filteredProperties, isFiltering } = nextProps;
-        const { index } = activeProperty;
+		// SHow info window of new active property
+		if (isFiltering && filteredProperties.length === 0) {
+			this.hideAll();
+		} else {
+			this.hideAll();
+			this.showInfoWindow(index);
+		}
+	}
 
-        // Hide all the other info boxes
-        this.hideAll();
+	componentDidUpdate() {
+		const { filteredProperties, isFiltering, isRouting } = this.props;
+		const { markers } = this.state;
 
-        // SHow info window of new active property
-        if (isFiltering && filteredProperties.length === 0) {
-            this.hideAll();
-        } else {
-            this.hideAll();
-            this.showInfoWindow(index);
-        }
-    }
+		if (markers) {
+			markers.forEach((marker) => {
+				const { property } = marker; // Return associated property
+				if (property){
+					if (isFiltering) {
+						// show markers of filtered properties and hide other markers
+						if (filteredProperties.includes(property)) {
+							markers[property.index].setVisible(true);
+						} else {
+							// Hide all the other markers
+							markers[property.index].setVisible(false);
+						}
+					} else {
+						// show all markers
+						markers[property.index].setVisible(true);
+					}
+				}
+			});
+		}
+	}
+	 createMarkers(properties, data) {
+		 const { setActiveProperty, activeProperty } = this.props;
+		 const activePropertyIndex = activeProperty.index;
+		 const { markers } = this.state;
 
-    componentDidUpdate() {
-        const { filteredProperties, isFiltering, isRouting } = this.props;
-        const { markers } = this.state;
+		 var self = this;
 
-        if (markers) {
-            markers.forEach((marker) => {
-                const { property } = marker; // Return associated property
-                if (property) {
-                    if (isFiltering) {
-                        // show markers of filtered properties and hide other markers
-                        if (filteredProperties.includes(property)) {
-                            markers[property.index].setVisible(true);
-                        } else {
-                            // Hide all the other markers
-                            markers[property.index].setVisible(false);
-                        }
-                    } else {
-                        // show all markers
-                        markers[property.index].setVisible(true);
-                    }
-                }
-            });
-        }
-    }
-    createMarkers(properties, data) {
-        const { setActiveProperty, activeProperty } = this.props;
-        const activePropertyIndex = activeProperty.index;
-        const { markers } = this.state;
+		 console.log("propertis:", properties);
+		 console.log('arrayDatas:', data);
+		 
+		properties.map((property, id) => {
+				const { latitude, longitude, index, address } = property;
+				let provincia =  data[0].provincia;
+				let place=data[0].distritos[id].nombre;
+				let age=data[0].distritos[id].edad;
+				let evaluate=data[0].distritos[id].Evaluados;
+				let leve=data[0].distritos[id].leve;
+				let moderada=data[0].distritos[id].moderada;
+				let severa=data[0].distritos[id].severa;
+				let percent=data[0].distritos[id].porcentaje;
+				
+				parseInt(percent);
+				
+				
+				const iw = new window.google.maps.InfoWindow({
+					
+				   content: `<div><h5>${provincia}</h5><h6>Distrito: ${place}</h6><ul classname="points"><li><b>${age}</b></li><li>Total de evaluados: <b>${evaluate}</b></li><li><img src="http://www.uam.es/StaticFiles/UniversidadAutonomaMadrid//img/punto_verde.png"/> Anemia Leve: <b>${leve}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoAmarillo.png"/> Anemia Moderada: <b>${moderada}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoRojo.png"/> Anemia Severa: <b>${severa}</b></li><li>Promedio: <b>${percent+"%"}</b></li></ul></div>`,
+		
+				});
 
-        var self = this;
+			 this.marker = new window.google.maps.Marker({
+				 position: { lat: latitude, lng: longitude },
+				 map: this.map,
+				 label: {
+					 color: '#56378a',
+					 //text: `${index + 1}`,
+				 },								
+				icon:(percent<=5)?icons[0]:(percent<=5 && percent<20)?icons[1]:(percent>=20 && percent<40?icons[2]:(percent>40?icons[3]:"de")),			
+				 property,		
+				
+			 });
 
-        console.log("propertis:", properties);
-        console.log('arrayDatas:', data);
+			 this.marker.iw = iw;
 
-        properties.map((property, id) => {
-            const { latitude, longitude, index, address } = property;
-            let provincia = data[0].provincia;
-            let place = data[0].distritos[id].nombre;
-            let age = data[0].distritos[id].edad;
-            let evaluate = data[0].distritos[id].Evaluados;
-            let leve = data[0].distritos[id].leve;
-            let moderada = data[0].distritos[id].moderada;
-            let severa = data[0].distritos[id].severa;
-            let percent = data[0].distritos[id].porcentaje;
+			 this.marker.addListener('click', () => {
+				 // Hide all markers
+				 this.hideAll();
+				 // Set active property, scroll to active property in list
+				 setActiveProperty(property, true);
+			 });
 
-            parseInt(percent);
+			 // Push marker on to state
+			 markers.push(this.marker);
 
+			 this.showInfoWindow(activePropertyIndex);
+		 });
+	 }
 
-            const iw = new window.google.maps.InfoWindow({
+	hideAll() {
+		const { markers } = this.state;
 
-                content: `<div><h5>${provincia}</h5><h6>Distrito: ${place}</h6><ul classname="points"><li><b>${age}</b></li><li>Total de evaluados: <b>${evaluate}</b></li><li><img src="http://www.uam.es/StaticFiles/UniversidadAutonomaMadrid//img/punto_verde.png"/> Anemia Leve: <b>${leve}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoAmarillo.png"/> Anemia Moderada: <b>${moderada}</b></li><li><img src="http://www.gedhosa.es/wp-content/themes/volts/images/puntoRojo.png"/> Anemia Severa: <b>${severa}</b></li><li>Promedio: <b>${percent+"%"}</b></li></ul></div>`,
+		markers.forEach((marker) => {
+			marker.iw.close();
+		});
+	}
 
-            });
-
-            this.marker = new window.google.maps.Marker({
-                position: { lat: latitude, lng: longitude },
-                map: this.map,
-                label: {
-                    color: '#56378a',
-                    //text: `${index + 1}`,
-                },
-
-                icon: (percent <= 5) ? icons[0] : (percent <= 5 && percent < 20) ? icons[1] : (percent >= 20 && percent < 40 ? icons[2] : (percent > 40 ? icons[3] : "de")),
-                property,
-
-            });
-
-            this.marker.iw = iw;
-
-            this.marker.addListener('click', () => {
-                // Hide all markers
-                this.hideAll();
-                // Set active property, scroll to active property in list
-                setActiveProperty(property, true);
-            });
-
-            // Push marker on to state
-            markers.push(this.marker);
-
-            this.showInfoWindow(activePropertyIndex);
-        });
-    }
-
-    hideAll() {
-        const { markers } = this.state;
-
-        markers.forEach((marker) => {
-            marker.iw.close();
-        });
-    }
-
-    render() {
-        return ( <div className = "mapContainer" >
-            	<div id = "map" ref = "map" > </div>
+	render() {
+		return (
+			<div className="mapContainer">
+				<div id="map" ref="map"></div>
 			</div>
         );
     }
