@@ -187,9 +187,6 @@ let icons=[{
 				//  icon: percent<=5?icons[0]:(percent>5 && percent<=20?icons[1]:(percent<20 && percent<=40?icons[2]:percent>40?icons[3]:"de")),
 				 property,
 
-
-				
-
 				//  icon: {
 				// 	 url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
 				// 	 size: new window.google.maps.Size(22, 40),
@@ -198,7 +195,7 @@ let icons=[{
 				// 	 // The anchor for this image is the base of the cross at (11, 52).
 				// 	 anchor: new window.google.maps.Point(11, 52),
 				//  },
-				property,
+				//property,
 				
 			 });
 
