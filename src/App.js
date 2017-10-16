@@ -27,7 +27,7 @@ const App = (props) => {
 				<Route path="/map" render={() => <DataMap model={model}/>}/>
 				<Route  path="/momFeed" render={() => <MomFeed model={model} />}/>
 				<Route path="/babyFeed" render={() => <BabyFeed model={model}/>}/>
-				<Route path='/hackathon-midis' render={() => <Redirect to="/home"  />}/>
+				<Route path='/hackathon-midis' render={() => <Redirect to="/home"/>}/>
 			</Switch>
 		</div>
 	</BrowserRouter>)
