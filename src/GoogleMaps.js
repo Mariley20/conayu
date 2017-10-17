@@ -32,18 +32,18 @@ let icons = [{
     {
         // naranja
         url: 'http://www.welcomecottages.com/assets/propdetails-map-indicator.png',
-        size: new window.google.maps.Size(20, 55),
+        size: new window.google.maps.Size(40, 55),
         // The origin for this image is (0, 0).
-        origin: new window.google.maps.Point(0, -15),
+        origin: new window.google.maps.Point(0, 0),
         // The anchor for this image is the base of the cross at (11, 52).
         anchor: new window.google.maps.Point(11, 52),
     },
     {
         // rojo
         url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
-        size: new window.google.maps.Size(40, 50),
+        size: new window.google.maps.Size(40, 55),
         // The origin for this image is (0, 0).
-        origin: new window.google.maps.Point(0, -15),
+        origin: new window.google.maps.Point(0, 0),
         // The anchor for this image is the base of the cross at (11, 52).
         anchor: new window.google.maps.Point(11, 52),
     }
