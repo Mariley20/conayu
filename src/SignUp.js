@@ -23,8 +23,8 @@ class SignUp extends Component {
 		constructor (props) {
 			super (props);
 			this.state = {
-                name : null,
-                email : true
+                name : '',
+                email : null
 			}
 		}
 		render () {
@@ -54,16 +54,20 @@ class SignUp extends Component {
 										</div>
 										<div className="help-block with-errors"></div>
 									</div>
-									<section className="container-fluid form">
+
+
+									<section className="container-fluid form">								
+										{console.log(this.state.email)}
 										
-										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
+										{(this.state.email =! null )?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
-										{/* <label className="form-check-label">
-											modificado por gladys
-											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
-										</label> */}
-										<div className="singupbtn">
-										{/* <p>Acceso rápido</p> */}
+
+									
+										{/* <NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar"><button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button></NavLink> */}
+
+
+										
+										<div className="singupbtn">								
 										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
 										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 									</div>

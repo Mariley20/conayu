@@ -1,5 +1,8 @@
 import React from 'react';
 import data from './data/Data';
+import {
+	NavLink
+} from 'react-router-dom'
 
 class Model {
 	constructor () {
@@ -63,6 +66,9 @@ class Model {
 	setIsRouting ( ) {
 		this.isRouting = true;
 		this.notify();
+	}
+	setmap(){
+		 <NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar"><button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button></NavLink>
 	}
 }
 
