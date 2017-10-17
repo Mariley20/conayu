@@ -34,7 +34,11 @@ class SignUp extends Component {
 				});
 			}
 			return (
-				<div id="text-container-component">
+				<div id="text-container-component ">
+															<div id="with-div">
+
+									<div id="transparent-background">
+
 					<HeaderApp/>
 					<div className="container-fluid">					
 						<div className="row">
@@ -71,6 +75,8 @@ class SignUp extends Component {
 							</div>
 						</div>
                     </div>
+					</div>
+			</div>
 			</div>
 			);
 		}

@@ -116,16 +116,32 @@ body .form{
             background-repeat: no-repeat;
   
             }
-          div{
-                background-color: rgba(239, 243, 243, 0.3);
-            }
-            form, .first,.row, .text-center, .singupbtn {
+        /* div {
+            } */
+        form, .first,.row, .text-center, .singupbtn {
                 background: transparent;
             }
         div > .text-vida{
          margin:10%;
          margin-bottom: 0%;
         
-        } 
-        
+        }
+
+        div > .mapContainer{
+
+            background-color: transparent;
+        }
+        #transparent-background{
+                            background-color: rgba(239, 243, 243, 0.4);
+
+                        }
+        #with-div{
+                            margin: 0 auto;
+                            width: 80%;
+                        }
+        /* div .Hierro,.proporciones, .Hierro,  .Verduras{
+               background:  #B3B3B3; 
+
+            } */
+           /* } */
 }
