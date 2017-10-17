@@ -10,7 +10,7 @@ const loadMaps = (cb) => {
     document.body.appendChild(script)
 }
 let icons = [{
-        // verde
+        // green aceptable
         url: 'http://www.jambajuice.com/images/www/tempIMGs/icn_marker.png',
         size: new window.google.maps.Size(20, 55),
         // The origin for this image is (0, 0).
@@ -19,7 +19,7 @@ let icons = [{
         anchor: new window.google.maps.Point(11, 52),
     },
     {
-        // amarillo
+        // yellow leve
         url: 'https://www.fpx.com/hubfs/_Success/_Images/Icons/location-map.png?t=1507908179820',
         size: new window.google.maps.Size(20, 55),
         // The origin for this image is (0, 0).
@@ -28,7 +28,7 @@ let icons = [{
         anchor: new window.google.maps.Point(11, 52),
     },
     {
-        // naranja
+        // orange moderada
         url: 'http://www.welcomecottages.com/assets/propdetails-map-indicator.png',
         size: new window.google.maps.Size(40, 55),
         // The origin for this image is (0, 0).
@@ -37,7 +37,7 @@ let icons = [{
         anchor: new window.google.maps.Point(11, 52),
     },
     {
-        // rojo
+        // red severa
         url: 'https://content.library.utoronto.ca/common/css/icons/map-pin-icon.png',
         size: new window.google.maps.Size(40, 55),
         // The origin for this image is (0, 0).
@@ -52,10 +52,9 @@ let icons = [{
 		super(props);
 
 		this.state = {
-			markers: []
+			markers: [],
 		};
 		this.autocompleteDestino = null;
-		this.cont=1;
 	}
 
 	componentWillMount() {
@@ -90,9 +89,8 @@ let icons = [{
 		MarkersService.getMarkers(function(err, data){
 			console.log("MarkersService.getMarkers() :", err, data);
 			self.createMarkers(properties, data);
-		});
-		
 
+		});
 	}
 
 	showInfoWindow(index) {
@@ -153,6 +151,8 @@ let icons = [{
 		 
 		properties.map((property, id) => {
 				const { latitude, longitude, index, address } = property;
+
+				//recover data from web server
 				let provincia =  data[0].provincia;
 				let place=data[0].distritos[id].nombre;
 				let age=data[0].distritos[id].edad;

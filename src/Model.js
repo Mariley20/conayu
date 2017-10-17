@@ -1,8 +1,5 @@
-
 import React from 'react';
 import data from './data/Data';
-import Utils from './Utils';
-import dataService from "./services/MarkersService";
 
 class Model {
 	constructor () {
@@ -22,7 +19,7 @@ class Model {
 	}
 	
 	setUserInfo (info) {
-		this.userInfo = info;		
+		this.userInfo = info;
 		this.notify();
 	}
 

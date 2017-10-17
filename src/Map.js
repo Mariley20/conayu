@@ -2,13 +2,6 @@ import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
 import HeaderMap from './HeaderMap';
 import './Map.css'
- import {
-	BrowserRouter,
-	Route,
-	Switch,
-	NavLink,
-	Redirect
-} from 'react-router-dom'
 const DataMap = ({model}) => {
 	const state = {
 		properties: model.properties,
@@ -29,20 +22,11 @@ const DataMap = ({model}) => {
 	const propertiesList = isFiltering ? filteredProperties : properties;
 
 	const setActiveProperty = (property, scroll) => {
-		//this.setState({
-		//	activeProperty: property,
-		//});
 		model.setActiveProperty(property);
-
 		const {index} = property;
-
 		// Scroll to active property
 		if (scroll) {
 			const target = `#card-${index}`;
-			//jump(target, {
-			//	duration: 800,
-			//	easing: easeInOutCubic,
-			//});
 		}
 	}
 	const onPathBntClick = () => {

@@ -35,7 +35,7 @@ class SignUp extends Component {
 				});
 			}
 			return (
-				<div>
+				<div id="text-container-component">
 					<HeaderApp/>
 					<div className="container-fluid">					
 						<div className="row">
@@ -43,7 +43,7 @@ class SignUp extends Component {
 								<form data-toggle="validator">
 									<div className="form-group row">
 										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">
-											<span className="input-group-addon"><i className="fa fa-user-o fa-2x"></i></span>										
+											<span className="input-group-addon"><i id="arrow" className="fa fa-user-o fa-2x" ></i></span>										
 											<input type="text" onChange={e => {this.state.name}} className="form-control inputName" placeholder="Usuario o correo" required/>
 										</div>
 									</div>
@@ -58,17 +58,18 @@ class SignUp extends Component {
 										
 										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
-										<label className="form-check-label">
-											{/* modificado por gladys */}
+										{/* <label className="form-check-label">
+											modificado por gladys
 											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
-										</label>
-									</section>
-									</form>
-									<div className="singupbtn">
-										<p>Acceso rápido</p>
+										</label> */}
+										<div className="singupbtn">
+										{/* <p>Acceso rápido</p> */}
 										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
 										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 									</div>
+									</section>
+									</form>
+
 							</div>
 						</div>
                     </div>

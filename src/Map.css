@@ -202,7 +202,8 @@
 }
 #datos_usuario{
 position: absolute;
-bottom: 10px;
+bottom:10%;
+margin-top: 2%;
 }
 .anemia{
   margin: 5px;
@@ -211,6 +212,7 @@ bottom: 10px;
 }
 
 .recomendation{
+  margin-top: 2%;
   margin: 10px;
 }
 
@@ -218,4 +220,10 @@ bottom: 10px;
   position: absolute;
   left: 60px;
   top: 10px;
+}
+
+.mama {
+  position: absolute;
+  left: -13px;
+  top: -239%;
 }
