@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 // import './App.css';
 import './SignUp.css';
 import {
-	NavLink
+	NavLink,
+	Link
 } from 'react-router-dom'
 
 class HeaderApp extends Component{
@@ -16,7 +17,7 @@ class HeaderApp extends Component{
 		{/* <hr/> */}
 	  </header>);
 	}
-  }
+}
   
 class SignUp extends Component {
 	
@@ -24,7 +25,7 @@ class SignUp extends Component {
 			super (props);
 			this.state = {
                 name : null,
-                email : true
+                email : false
 			}
 		}
 		render () {
@@ -56,20 +57,15 @@ class SignUp extends Component {
 									</div>
 									<section className="container-fluid form">
 										
-										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
-										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
-										{/* <label className="form-check-label">
-											modificado por gladys
-											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
-										</label> */}
+										{!this.state.email?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
+										:<button  type="submit" className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
 										<div className="singupbtn">
-										{/* <p>Acceso rápido</p> */}
+										<p>Acceso rápido</p>
 										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
 										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 									</div>
 									</section>
 									</form>
-
 							</div>
 						</div>
                     </div>
@@ -77,4 +73,5 @@ class SignUp extends Component {
 			);
 		}
 	}
+
 export default SignUp;
