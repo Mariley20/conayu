@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-// import './App.css';
+import { FormErrors } from './FormErrors';
 import './SignUp.css';
-import {
-	NavLink
-} from 'react-router-dom'
+import {	NavLink } from 'react-router-dom'
 
 class HeaderApp extends Component{
 	render(){return(
@@ -15,66 +13,91 @@ class HeaderApp extends Component{
 		<h3 className="signuph2 text-center">Ingresar</h3>
 		{/* <hr/> */}
 	  </header>);
-	}
+		}
   }
-  
-class SignUp extends Component {
-	
-		constructor (props) {
-			super (props);
-			this.state = {
-                name : null,
-                email : true
-			}
-		}
-		render () {
-			const {model} = this.props;
-			const onInputChange = (e) => {
-				this.setState ({
-					name: e.target.checked
-				});
-			}
-			return (
-				<div id="text-container-component">
-					<HeaderApp/>
-					<div className="container-fluid">					
-						<div className="row">
-							<div className="col-md-12 col-sm-12 col-xs-12 text-center">
-								<form data-toggle="validator">
-									<div className="form-group row">
-										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">
-											<span className="input-group-addon"><i id="arrow" className="fa fa-user-o fa-2x" ></i></span>										
-											<input type="text" onChange={e => {this.state.name}} className="form-control inputName" placeholder="Usuario o correo" required/>
-										</div>
-									</div>
-									<div className="form-group row">
-										<div className="col-lg-12 col-md-12 input-group">
-											<span className="input-group-addon"><i className="fa fa-key fa-fw lock"></i></span>							
-											<input type="password" onChange={e => {this.state.email}} className="form-control inputEmail"  placeholder="contraseña" data-error="Bruh, that email address is invalid" required/>
-										</div>
-										<div className="help-block with-errors"></div>
-									</div>
-									<section className="container-fluid form">
-										
-										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
-										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
-										{/* <label className="form-check-label">
-											modificado por gladys
-											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
-										</label> */}
-										<div className="singupbtn">
-										{/* <p>Acceso rápido</p> */}
-										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
-										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
-									</div>
-									</section>
-									</form>
+	class SignUp extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      formErrors: {email: '', password: ''},
+      emailValid: false,
+      passwordValid: false,
+      formValid: false
+    }
+  }
 
-							</div>
+  handleUserInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({[name]: value},
+                  () => { this.validateField(name, value) });
+  }
+
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let emailValid = this.state.emailValid;
+    let passwordValid = this.state.passwordValid;
+
+    switch(fieldName) {
+      case 'email':
+        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+        fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+        break;
+      case 'password':
+        passwordValid = value.length >= 6;
+        fieldValidationErrors.password = passwordValid ? '': ' is too short';
+        break;
+      default:
+        break;
+    }
+    this.setState({formErrors: fieldValidationErrors,
+                    emailValid: emailValid,
+                    passwordValid: passwordValid
+                  }, this.validateForm);
+  }
+
+  validateForm() {
+    this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+  }
+
+  errorClass(error) {
+    return(error.length === 0 ? '' : 'has-error');
+  }
+
+  render () {
+    return (
+			<div className="container">
+				<HeaderApp/>
+      <form className="demoForm">
+        <div className="panel panel-default"></div>
+        <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+				<div className='input-group'>
+				<span className="input-group-addon"><i id="arrow" className="fa fa-user-o fa-2x" ></i></span>
+				{/* <label htmlFor="email">Email address</label> <span className="input-group-addon"><i id="arrow" className="fa fa-user-o fa-2x" ></i></span>*/}
+          <input type="email" required className="form-control inputName" name="email"
+            placeholder="Email"  value={this.state.email}  onChange={this.handleUserInput}  />
 						</div>
-                    </div>
+        </div>
+        <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
+					<div className='input-group'>
+					<span className="input-group-addon"><i className="fa fa-key fa-fw lock"></i></span>
+          <input type="password" className="form-control inputName" name="password"
+            placeholder="Password" value={this.state.password} onChange={this.handleUserInput}  />
+						</div>
+        </div>
+				{
+					this.state.formValid?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">Ingresar</NavLink>
+					:<button type="submit" className="btn btn-lg btn-block btn-ingresar" disabled={!this.state.formValid}>Ingresar</button>
+				}
+      </form>
+			<div className="singupbtn">
+			<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
+			<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 			</div>
-			);
-		}
-	}
+			</div>
+    )
+  }
+}
 export default SignUp;
