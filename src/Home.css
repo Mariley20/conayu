@@ -11,6 +11,7 @@ body{
     margin: 0 auto;
     color: rgb(0, 0, 0);  
     z-index: -1;
+    background-attachment: fixed;
 }
 h2{
     font-size: 500%;
@@ -68,10 +69,10 @@ body .form{
 .first{
     margin-top: 40%;
 }
-div > .text-vida{
+/* div > .text-vida{
  border-top: 1px solid #b4b6b9;
 
-}
+} */
 @media only screen and (min-width: 500px) {
         /* h2{
             font-size: 500%;
@@ -111,16 +112,36 @@ div > .text-vida{
         body{
             text-align: center;
             background-image: url(http://www.madridfruit.com/wp-content/uploads/2017/05/madrid_fruit_frutas_y_verduras_01.jpg);
-            
+            background-size: cover;
+            background-repeat: no-repeat;
   
             }
-            div{
-                background-color: rgba(239, 243, 243, 0.3);
+        /* div {
+            } */
+        form, .first,.row, .text-center, .singupbtn {
+                background: transparent;
             }
         div > .text-vida{
          margin:10%;
          margin-bottom: 0%;
         
-        } 
-        
+        }
+
+        div > .mapContainer{
+
+            background-color: transparent;
+        }
+        #transparent-background{
+                            background-color: rgba(239, 243, 243, 0.4);
+
+                        }
+        #with-div{
+                            margin: 0 auto;
+                            width: 80%;
+                        }
+        /* div .Hierro,.proporciones, .Hierro,  .Verduras{
+               background:  #B3B3B3; 
+
+            } */
+           /* } */
 }
