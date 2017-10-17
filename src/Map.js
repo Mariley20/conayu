@@ -47,6 +47,16 @@ const DataMap = ({model}) => {
 	}
 	const onPathBntClick = () => {
 		model.setFilter(10);
+		
+	}
+	const onPathMoBntClick = () => {
+		
+		model.setFilterMo(10);
+	}
+
+	const onPathAllBntClick = () => {
+		
+		model.setFilterAll(10);
 	}
 
 	return (<div>
@@ -56,6 +66,8 @@ const DataMap = ({model}) => {
 		</div>
 		<div className="col-md-3 col-sm-3 filtro">
 			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>Anemia Severa</button>
+			<button id="ruta" className="btn btn-success" onClick={onPathMoBntClick}>Anemia Moderada</button>
+			<button id="ruta" className="btn btn-success" onClick={onPathAllBntClick}>Muestra Total</button>
 		</div>
 		<GoogleMaps
 			model = {model}

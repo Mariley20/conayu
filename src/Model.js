@@ -17,6 +17,7 @@ class Model {
 		this.isFiltering = false;
 		this.isRouting = false;
 		this.targetPlace = null;
+		console.log("filteredProperties",this.filteredProperties);
 	}
 	
 	setUserInfo (info) {
@@ -42,7 +43,23 @@ class Model {
 		this.isFiltering = true;
 		console.log ('before filter:', this.properties.length);
 		this.filteredProperties = this.properties.filter( (item) =>  item.porcentaje > 40);
-		console.log ('after filter:', this.filteredProperties.length);
+		console.log ('after filter:', this.filteredProperties);
+		this.notify();
+	}
+	setFilterMo (param) {
+		this.isFiltering = true;
+		console.log ('before filter:', this.properties.length);
+		this.filteredProperties = this.properties.filter( (item) =>   item.porcentaje<40);		
+		console.log ('after filter:', this.filteredProperties.length);	
+	
+		this.notify();
+	}
+
+	setFilterAll (param) {
+		this.isFiltering = true;
+		console.log ('before filter:', this.properties.length);
+		this.filteredProperties = this.properties;			
+	
 		this.notify();
 	}
 
