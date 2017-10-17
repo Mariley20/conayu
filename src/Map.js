@@ -61,12 +61,12 @@ const DataMap = ({model}) => {
 
 	return (<div>
 		<HeaderMap />
-		
 		<h1 className="conayus-name">YANAPA</h1>
-		<div className="col-md-3 col-sm-3 filtro">
-			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>Anemia Severa</button>
-			<button id="ruta" className="btn btn-success" onClick={onPathMoBntClick}>Anemia Moderada</button>
-			<button id="ruta" className="btn btn-success" onClick={onPathAllBntClick}>Muestra Total</button>
+		<div className="filtro">
+			<button id="all_point" className="btn btn-info anemia" onClick={onPathAllBntClick}>Total</button>
+			<button id="point_severo" className="btn btn-success anemia">Leve</button>
+			<button id="point_moderada" className="btn btn-warning anemia" onClick={onPathMoBntClick}>Moderada</button>
+			<button id="point_severo" className="btn btn-danger anemia" onClick={onPathBntClick}>Severa</button>
 		</div>
 		<GoogleMaps
 			model = {model}

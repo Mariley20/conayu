@@ -32,8 +32,8 @@ class HeaderMap extends Component {
 					<a href="javascript:void(0)" className="closebtn" onClick={close}>&times;</a>
 					<div id="datos_usuario">
 					<div><img className="img-fluid mama" src="https://s3.amazonaws.com/nutrifami/training/images/201733113129701.png" /></div>
-						<NavLink to={"/momFeed"} className="btn btn-warning">Alimentate Mamá</NavLink>
-						<NavLink to={"/babyFeed"} className="btn btn-warning">Alimentate Bebe </NavLink>
+						<NavLink to={"/momFeed"} className="btn btn-warning recomendation">Alimentate Mamá</NavLink>
+						<NavLink to={"/babyFeed"} className="btn btn-warning recomendation">Alimentate Bebe </NavLink>
 					</div>
 				</div>
 			</header>
