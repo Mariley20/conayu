@@ -19,6 +19,9 @@ h1{
     
 }
 
+
+
+
 .home-p{
     /* color: #FFFFFF;  */
     color:#626161; 
@@ -66,4 +69,46 @@ body .form{
 div > .text-vida{
  border-top: 1px solid #b4b6b9;
 
+}
+@media only screen and (min-width: 500px) {
+        /* h2{
+            font-size: 500%;
+        }
+        
+        h1{
+            font-size: 350%;
+            
+        } */
+        section{
+            /* border-top: 1px solid #b4b6b9;
+            border-bottom: 1px solid #b4b6b9; */
+            
+            margin: 5%;  
+            /* background-color: #e1e4e7;  */
+            padding: 2%;
+            border-radius: 20px; 
+            
+    }
+    section{
+        margin: 0 auto;
+        width: 30%;
+    }
+
+        .first{
+            margin-top: 10%;
+            padding: 5%;
+            
+        }
+
+        .text-vida{
+
+            margin-top: 5%;
+            padding: 2%;
+        }
+        body{
+            text-align: center;
+  
+            }
+
+        
 }

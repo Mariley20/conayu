@@ -35,7 +35,7 @@ class SignUp extends Component {
 				});
 			}
 			return (
-				<div>
+				<div id="text-container-component">
 					<HeaderApp/>
 					<div className="container-fluid">					
 						<div className="row">

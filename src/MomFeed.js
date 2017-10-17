@@ -17,7 +17,7 @@ class MomFeed extends Component {
 			      <NavLink to="/map"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		      </div>
           <h1>Alimentación Materna</h1>
-          <hr className="linea" />
+          {/* <hr className="linea" /> */}
           <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
           <div className="Hierro proporciones">

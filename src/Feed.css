@@ -99,3 +99,25 @@
     margin: 10px 10px;
     margin-top: 45px;
 }
+
+@media only screen and (min-width: 500px) {
+    .Hierro h3, .Verduras h3{
+        font-weight:lighter;
+    }
+    .momFeed h3 {
+        font-size: 120%;
+        color: #626161;
+        padding: 1%;
+    }
+
+    .momFeed h1 {
+        margin-top: 0%;
+        font-size: 3vw;
+    }
+
+    .momFeed {
+
+        width: 70%;
+
+    }
+}

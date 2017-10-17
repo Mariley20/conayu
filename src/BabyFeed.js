@@ -23,9 +23,9 @@ class BabyFeed extends Component {
           <div className="btnVolver">
 			      <NavLink to="/map"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		      </div>
-          <h1>YANAPA</h1>
-          <hr className="linea" />
           <h1>Alimentación del Bebé</h1>
+          <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
+          
 
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
               <div className="Hierro proporciones">
@@ -45,7 +45,6 @@ class BabyFeed extends Component {
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
               </div>
                     <div>
-                    <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
 
                       <img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
                 {/* <div className="row platos">
