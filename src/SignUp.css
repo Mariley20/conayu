@@ -1,3 +1,7 @@
+.demoForm {
+	width: 500px;
+	margin: auto;
+}
 .conayus-name{
     font-family: 'Fredoka One', cursive;
     text-align: center;
@@ -29,7 +33,7 @@ a{
 
 .volver{
     font-size: 4em;
-} 
+}
 
  .btnSiguiente{
     background-color: #FF00BF;
@@ -41,7 +45,7 @@ a{
     text-align: center;
     margin: 0 auto;
     font-size: 1.5em;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 .btn-ingresar{
     background-color: #ffc107;
@@ -135,5 +139,8 @@ input, .inputName, .inputEmail{
 #text-container-component{
     margin: 0 auto;
     width: 50%;
+}
+.tcontainer-fluid{
+    background: transparent;
 }
 }
