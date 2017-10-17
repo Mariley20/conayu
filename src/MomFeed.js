@@ -36,7 +36,7 @@ class MomFeed extends Component {
                 <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
               </div>
-                    <div><img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
+                    {/* <div><img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div> */}
                     
                 {/* <div className="row platos">
                   <div className="col col-sm-4  "><img className="img-fluid" src={"/images/" + "1m" + ".PNG"} /></div>

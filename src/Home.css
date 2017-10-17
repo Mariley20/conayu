@@ -11,6 +11,7 @@ body{
     margin: 0 auto;
     color: rgb(0, 0, 0);  
     z-index: -1;
+    background-attachment: fixed;
 }
 h2{
     font-size: 500%;
@@ -111,10 +112,11 @@ div > .text-vida{
         body{
             text-align: center;
             background-image: url(http://www.madridfruit.com/wp-content/uploads/2017/05/madrid_fruit_frutas_y_verduras_01.jpg);
-            
+            background-size: cover;
+            background-repeat: no-repeat;
   
             }
-            div{
+          div div{
                 background-color: rgba(239, 243, 243, 0.3);
             }
         div > .text-vida{

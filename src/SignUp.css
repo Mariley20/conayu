@@ -136,7 +136,7 @@ input, .inputName, .inputEmail{
     margin: 0 auto;
     width: 50%;
 }
-.tcontainer-fluid{
+.container-fluid .row{
     background: transparent;
-}
+} 
 }
