@@ -2,6 +2,7 @@
 import React from 'react';
 import data from './data/Data';
 import Utils from './Utils';
+import dataService from "./services/MarkersService";
 
 class Model {
 	constructor () {
@@ -11,7 +12,7 @@ class Model {
 			surname : null,
 			email : null,
 		}
-		this.properties = data.properties;
+		this.properties = data.properties;	// dataService.getMarkers
 		this.activeProperty = data.properties[0]
 		this.filteredProperties = [];
 		this.isFiltering = false;
@@ -21,8 +22,7 @@ class Model {
 	}
 	
 	setUserInfo (info) {
-		this.userInfo = info;
-		//Utils.store('lyft', this.userInfo);
+		this.userInfo = info;		
 		this.notify();
 	}
 

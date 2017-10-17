@@ -46,8 +46,7 @@ const DataMap = ({model}) => {
 		}
 	}
 	const onPathBntClick = () => {
-		model.setFilter(10);
-		
+		model.setFilter(10);		
 	}
 	const onPathMoBntClick = () => {
 		
@@ -58,7 +57,6 @@ const DataMap = ({model}) => {
 		
 		model.setFilterAll(10);
 	}
-
 	return (<div>
 		<HeaderMap />
 		<h1 className="conayus-name">YANAPA</h1>
@@ -68,6 +66,7 @@ const DataMap = ({model}) => {
 			<button id="point_moderada" className="btn btn-warning anemia" onClick={onPathMoBntClick}>Moderada</button>
 			<button id="point_severo" className="btn btn-danger anemia" onClick={onPathBntClick}>Severa</button>
 		</div>
+		
 		<GoogleMaps
 			model = {model}
 			properties = {properties}

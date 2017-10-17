@@ -1,9 +1,6 @@
 import request from 'superagent';
-
 export default class MarkersService {
-
     static getMarkers(callback){
-
         return request.
 		get("https://conayu.mybluemix.net/traer").
 		end(function(error, response){

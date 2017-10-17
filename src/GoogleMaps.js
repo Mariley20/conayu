@@ -1,6 +1,5 @@
 import React from 'react';
 import MarkersService from "./services/MarkersService";
-
 const loadMaps = (cb) => {
     // window.google.maps script loading garbage
     const KEY = 'AIzaSyCsIUMjCPmZCK_CrP-7mTXPBQRZMNeYaU4'
@@ -9,7 +8,6 @@ const loadMaps = (cb) => {
     const script = document.createElement('script')
     script.src = URL
     document.body.appendChild(script)
-
 }
 let icons = [{
         // verde
@@ -79,7 +77,8 @@ let icons = [{
 		var self = this;
 
 		this.map = new window.google.maps.Map(this.refs.map, {
-			center: { lat: latitude, lng: longitude },
+
+			center: { lat:latitude, lng: longitude },
 			zoom: 10,
 			mapTypeControl: false
 		});
