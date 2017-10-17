@@ -12,8 +12,7 @@ class HeaderApp extends Component{
 			<NavLink to="/Home"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		</div>
 		<h1 className="conayus-name">YANAPA</h1>
-		<h3 className="signuph2 text-center">Ingresar</h3>
-		{/* <hr/> */}
+		<hr/>
 	  </header>);
 	}
   }
@@ -58,12 +57,11 @@ class SignUp extends Component {
 										
 										{this.state.email ?<NavLink to={"/map"}className="btn btn-lg btn-block btn-ingresar">INGRESAR</NavLink>
 										:<button className="btn btn-lg btn-block btn-ingresar ">Ingresar</button>}
-										{/* <label className="form-check-label">
-											modificado por gladys
+										<label className="form-check-label">
 											 <a href=""><h6 className="signup-h">Restablecer Contraseña</h6></a>
-										</label> */}
+										</label>
 										<div className="singupbtn">
-										{/* <p>Acceso rápido</p> */}
+										<p>Acceso rápido</p>
 										<button className="btn-social doodle"><i className="fa fa-google-plus-square" aria-hidden="true"></i><a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser">Google</a></button>
 										<button className="btn-social face"><i className="fa fa-facebook-official" aria-hidden="true"></i> <a href="https://www.facebook.com/">facebook</a></button>
 									</div>

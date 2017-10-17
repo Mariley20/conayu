@@ -14,7 +14,7 @@ class Home extends Component {
 		render () {
 			const {model} = this.props;
     return (
-    <div>
+    <div id="divtransparencia">
     <div className=" form first">
             <h2 className="conayus-home yanapafirst">YANAPA</h2>
             <h4 className="home-p">#Teayudamosaayudar</h4>

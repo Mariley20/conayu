@@ -27,7 +27,7 @@ class BabyFeed extends Component {
           <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
           
 
-          <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
+          <div id="background-img"><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
               <div className="Hierro proporciones">
                 <h3>Comidas espesas 5 veces al dia</h3>
                 <p>papillas, Zapallo con lentejitas y papitas, papas con frejoles y zanahoria</p>
@@ -44,7 +44,7 @@ class BabyFeed extends Component {
                 <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
               </div>
-                    <div>
+                    <div id="background-img">
 
                       <img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
                 {/* <div className="row platos">

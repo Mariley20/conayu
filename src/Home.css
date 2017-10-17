@@ -69,10 +69,10 @@ body .form{
 .first{
     margin-top: 40%;
 }
-div > .text-vida{
+/* div > .text-vida{
  border-top: 1px solid #b4b6b9;
 
-}
+} */
 @media only screen and (min-width: 500px) {
         /* h2{
             font-size: 500%;
@@ -116,8 +116,11 @@ div > .text-vida{
             background-repeat: no-repeat;
   
             }
-          div div{
+          div{
                 background-color: rgba(239, 243, 243, 0.3);
+            }
+            form, .first,.row, .text-center, .singupbtn {
+                background: transparent;
             }
         div > .text-vida{
          margin:10%;
