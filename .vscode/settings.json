@@ -1,0 +1,8 @@
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai",
+    "editor.autoIndent": false,
+    "html.format.enable": false,
+    "typescript.format.enable": false,
+    "javascript.format.enable": false
+}

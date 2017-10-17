@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Feed.css';
 import { NavLink} from 'react-router-dom'
 
+// Component of health food recommendation
 class BabyFeed extends Component {
 		constructor (props) {
 			super (props);

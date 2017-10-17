@@ -1,7 +1,5 @@
-
 import React from 'react';
 import data from './data/Data';
-import Utils from './Utils';
 
 class Model {
 	constructor () {
@@ -22,7 +20,6 @@ class Model {
 	
 	setUserInfo (info) {
 		this.userInfo = info;
-		//Utils.store('lyft', this.userInfo);
 		this.notify();
 	}
 
