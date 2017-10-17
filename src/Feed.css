@@ -21,7 +21,7 @@
 }
 .momFeed h3 {
     font-size: 4vw;
-    color: white;
+    color: #626161;
 }
 .platos img {
     width: auto;
@@ -56,13 +56,13 @@
     font-style: italic;
 }
 .Hierro h3 {
-    background: #52bc1e;
+    background: #ffc107;
     border-radius: 10px;
 }
 
 
 .Verduras h3 {
-    background: #52bc1e;
+    background: #ffc107;
     border-radius: 10px;
 }
 
@@ -75,12 +75,16 @@
     padding: 2px;
 }
 .Hierro {
-    background: #ffffff;
+        background-color: #e1e4e7;
+
+    /* background: #ffffff; */
     border-radius: 10px;
     margin-bottom: 6px;
 }
 .Verduras {
-    background: #ffffff;
+    background-color: #e1e4e7;
+    
+    /* background: #ffffff; */
     border-radius: 10px;
     margin-top: 6px;
 }

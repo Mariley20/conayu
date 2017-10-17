@@ -119,3 +119,7 @@ height: 50px;
 .face{
     background: rgb(13, 51, 163);
 }
+
+input, .inputName, .inputEmail{
+    background: white;
+}

@@ -51,8 +51,9 @@ const DataMap = ({model}) => {
 
 	return (<div>
 		<HeaderMap />
-		
-		<h1 className="conayus-name">YANAPA</h1>
+		<div className="colorgrey">
+		<h2 className="conayus-name">YANAPA</h2>
+		</div>
 		<div className="col-md-3 col-sm-3 filtro">
 			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>Anemia Severa</button>
 		</div>

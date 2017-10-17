@@ -13,17 +13,26 @@ class Home extends Component {
 		}
 		render () {
 			const {model} = this.props;
-    return (<div className="home-container">
-        <form>
-            <h1 className="conayus-home">YANAPA</h1>
-            <h5 className="home-p">#Teayudamosaayudar</h5>
-            <NavLink
-                to={"/signUp"} className="btn btn-warning">Empezar
-            </NavLink>
-        </form>
+    return (
+    <div>
+    <div className=" form first">
+            <h2 className="conayus-home yanapafirst">YANAPA</h2>
+            <h4 className="home-p">#Teayudamosaayudar</h4>
 
-    </div>
+        </div>
+        <section section-form  >
+            
+        <NavLink
+                to={"/signUp"} className="btn btn-lg btn-block btn-ingresar">Empezar
+            </NavLink>
+        </section>
+        <div><h5 className="home-p text-vida">Tu cuerpo es tu compañero de vida cuidalo escuchalo entiendelo.</h5></div>
+
+        </div>
+
+        
 )
 }
 }
+
 export default Home;

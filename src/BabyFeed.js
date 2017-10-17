@@ -23,9 +23,10 @@ class BabyFeed extends Component {
           <div className="btnVolver">
 			      <NavLink to="/map"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		      </div>
-          <h1>Alimentación del Bebé</h1>
+          <h1>YANAPA</h1>
           <hr className="linea" />
-          <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
+          <h1>Alimentación del Bebé</h1>
+
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
               <div className="Hierro proporciones">
                 <h3>Comidas espesas 5 veces al dia</h3>
@@ -43,7 +44,10 @@ class BabyFeed extends Component {
                 <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
               </div>
-                    <div><img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
+                    <div>
+                    <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
+
+                      <img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
                 {/* <div className="row platos">
                   <div className="col col-sm-4  "><img className="img-fluid" src={"/images/" + "1m" + ".PNG"} /></div>
                   <div className="col col-sm-4"><img className="img-fluid" src={"/images/" + "2m" + ".PNG"} /></div>
