@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Feed.css';
 import { NavLink} from 'react-router-dom'
 
+// Component of health food recommendation
 class BabyFeed extends Component {
 		constructor (props) {
 			super (props);
@@ -24,9 +25,7 @@ class BabyFeed extends Component {
 			      <NavLink to="/map"><i className="fa fa-angle-left backend" aria-hidden="true"></i>{<back/>}</NavLink>
 		      </div>
           <h1>Alimentación del Bebé</h1>
-          <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>
-          
-
+          <h3 className="subtitulo">Con estos alimentos tú y tu bebé estarán sanos y fuertes</h3>    
           <div><img className="img-fluid imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113055758.png" /></div>
               <div className="Hierro proporciones">
                 <h3>Comidas espesas 5 veces al dia</h3>
@@ -44,14 +43,9 @@ class BabyFeed extends Component {
                 <p><label>Zapallo</label><label>Espinaca</label><label>Zanahoria</label><label>Tomate</label><label>Acelga</label></p>
                 <p><label>Naranja</label><label>Mango</label><label>Limon</label></p>
               </div>
-                    <div>
-
-                      <img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" /></div>
-                {/* <div className="row platos">
-                  <div className="col col-sm-4  "><img className="img-fluid" src={"/images/" + "1m" + ".PNG"} /></div>
-                  <div className="col col-sm-4"><img className="img-fluid" src={"/images/" + "2m" + ".PNG"} /></div>
-                  <div className="col col-sm-4"><img className="img-fluid" src={"/images/" + "3m" + ".PNG"} /></div>
-              </div> */}
+              <div>
+                <img className="imgNutrifami" src="https://s3.amazonaws.com/nutrifami/training/images/201733113113673.png" />
+              </div>
       </div>
     )
     }
