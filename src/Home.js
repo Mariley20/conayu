@@ -26,7 +26,8 @@ class Home extends Component {
                 to={"/signUp"} className="btn btn-lg btn-block btn-ingresar">Empezar
             </NavLink>
         </section>
-        <div><h5 className="home-p text-vida">Tu cuerpo es tu compañero de vida cuidalo escuchalo entiendelo.</h5></div>
+        <div>
+                        <h5 className="home-p text-vida">Tu cuerpo es tu compañero de vida cuidalo escuchalo entiendelo.</h5></div>
 
         </div>
 

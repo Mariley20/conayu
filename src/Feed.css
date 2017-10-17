@@ -75,14 +75,14 @@
     padding: 2px;
 }
 .Hierro {
-        background-color: #e1e4e7;
+        /* background-color: #e1e4e7; */
 
     /* background: #ffffff; */
     border-radius: 10px;
     margin-bottom: 6px;
 }
 .Verduras {
-    background-color: #e1e4e7;
+    /* background-color: #e1e4e7; */
     
     /* background: #ffffff; */
     border-radius: 10px;
@@ -99,7 +99,14 @@
     margin: 10px 10px;
     margin-top: 45px;
 }
+.backend{
+    color: #40c2cf;
+    font-weight: bold;
+    text-shadow:5px 5px 5px #000000;
+    
+    
 
+}
 @media only screen and (min-width: 500px) {
     .Hierro h3, .Verduras h3{
         font-weight:lighter;
