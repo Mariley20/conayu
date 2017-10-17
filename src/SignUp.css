@@ -102,8 +102,10 @@ height: 50px;
 }
 
 .btn-social a{
+    font-family: arial;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: bold;
+    /* font-weight: 100; */
 }
 
 .btn-social i{
@@ -133,5 +135,8 @@ input, .inputName, .inputEmail{
 #text-container-component{
     margin: 0 auto;
     width: 50%;
+}
+.tcontainer-fluid{
+    background: transparent;
 }
 }

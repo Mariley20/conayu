@@ -43,7 +43,7 @@ class SignUp extends Component {
 								<form data-toggle="validator">
 									<div className="form-group row">
 										<div className="col-lg-12 col-md-12 col-xs-12 col-sm-12 input-group">
-											<span className="input-group-addon"><i className="fa fa-user-o fa-2x"></i></span>										
+											<span className="input-group-addon"><i id="arrow" className="fa fa-user-o fa-2x" ></i></span>										
 											<input type="text" onChange={e => {this.state.name}} className="form-control inputName" placeholder="Usuario o correo" required/>
 										</div>
 									</div>
