@@ -44,12 +44,17 @@ const DataMap = ({model}) => {
 		model.setFilterAll(10);
 	}
 
+	const onPathleveBntClick = () => {
+		
+		model.setFilterAceptable(10);
+	}
+
 	return (<div>
 		<HeaderMap />
 		<h1 className="conayus-name">YANAPA</h1>
 		<div className="filtro">
 			<button id="all_point" className="btn btn-info anemia" onClick={onPathAllBntClick}>Total</button>
-			<button id="point_severo" className="btn btn-success anemia">Leve</button>
+			<button id="point_severo" className="btn btn-success anemia" onClick={onPathleveBntClick}>Leve</button>
 			<button id="point_moderada" className="btn btn-warning anemia" onClick={onPathMoBntClick}>Moderada</button>
 			<button id="point_severo" className="btn btn-danger anemia" onClick={onPathBntClick}>Severa</button>
 		</div>
