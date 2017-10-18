@@ -38,7 +38,7 @@ class Model {
 		this.targetPlace  = targetPlace;
 		this.notify();
 	}
-
+	//Fitro severo
 	setFilter (param) {
 		this.isFiltering = true;
 		console.log ('before filter:', this.properties.length);
@@ -46,19 +46,28 @@ class Model {
 		console.log ('after filter:', this.filteredProperties);
 		this.notify();
 	}
+	//Filtro moderado
 	setFilterMo (param) {
 		this.isFiltering = true;
 		console.log ('before filter:', this.properties.length);
-		this.filteredProperties = this.properties.filter( (item) =>   item.porcentaje<40);		
+		this.filteredProperties = this.properties.filter( (item) =>   item.porcentaje < 40);		
 		console.log ('after filter:', this.filteredProperties.length);	
 	
 		this.notify();
 	}
-
+	//filtro All
 	setFilterAll (param) {
 		this.isFiltering = true;
 		console.log ('before filter:', this.properties.length);
 		this.filteredProperties = this.properties;			
+	
+		this.notify();
+	}
+	//filtro leve
+	setFilterAceptable (param) {
+		this.isFiltering = true;
+		console.log ('before filter:', this.properties.length);
+		this.filteredProperties = this.properties.filter( (item) =>   item.porcentaje <5);;			
 	
 		this.notify();
 	}
