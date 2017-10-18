@@ -28,7 +28,7 @@ class HeaderMap extends Component {
 			<header id="mapa_header">
 				<img className="img-responsive" id='usuario_logo' onClick={open} src={usuario} alt="" />
 				<h1 className="conayus-map">YANAPA</h1>
-				<div id="mySidenav" className="sidenav" style={{ width: this.state.show ? '250px' : 0 }}>
+				<div id="mySidenav" className="sidenav" style={{ width: this.state.show ? '190px' : 0 }}>
 					<a href="javascript:void(0)" className="closebtn" onClick={close}>&times;</a>
 					<div id="datos_usuario">
 					<div><img className="img-fluid mama" src="https://s3.amazonaws.com/nutrifami/training/images/201733113129701.png" /></div>
