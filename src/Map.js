@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
 import HeaderMap from './HeaderMap';
 import './Map.css'
+
 const DataMap = ({model}) => {
 	const state = {
 		properties: model.properties,
